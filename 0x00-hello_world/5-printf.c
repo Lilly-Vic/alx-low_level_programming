@@ -1,8 +1,6 @@
 #include <stdio.h>
 /**
- * main - prints exactly with proper grammar
- *
- * Description:'printf()'
+ * main - Entry point
  *
  * return: Always 0 (Success)
  */
