@@ -14,16 +14,19 @@ int main(void)
 	{
 		for (b = '0'; b <= '9'; b++)
 		{
-			if (a < b && b < c)
+			for (c = '0'; c <= '9'; c++)
 			{
-				putchar(a);
-				putchar(b);
-				putchar(c);
-
-				if (a != '7')
+				if (a < b && b < c)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(a);
+					putchar(b);
+					putchar(c);
+
+					if (a != '7')
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
