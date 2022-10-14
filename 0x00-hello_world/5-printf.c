@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * main - prints exactly with proper grammar
+ * main - Entry point
  *
- * Description:'printf()'
+ * Description 'printf()'
  *
- * return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
