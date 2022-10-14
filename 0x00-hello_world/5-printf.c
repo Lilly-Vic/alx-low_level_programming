@@ -1,9 +1,8 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
  *
- * Description: printing
+ * Description:'print'
  *
  * return: Always 0 (Success)
  */
