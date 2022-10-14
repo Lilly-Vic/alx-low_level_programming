@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- * main - assign a random number to the variable n each time it is executed
- * print whether the number stored in the variable n is positive or negative
+ * main - Entry point
+ * Description: assign a random number to the variable and print
  * Return: Always 0 (Success)
  */
 
