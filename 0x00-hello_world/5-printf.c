@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: printf
+ * Description: 'printf'
  *
  * return: Always 0 (Success)
  */
