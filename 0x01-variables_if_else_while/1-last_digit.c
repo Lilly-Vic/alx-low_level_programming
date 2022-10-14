@@ -4,7 +4,7 @@
 
 /**
  * main - Entry point
- * Description: assign a random number to the variable and print the last digit stored in the variable
+ * Description: assign a random number to the variable and print
  * Return: Always 0 (Success)
  */
 
