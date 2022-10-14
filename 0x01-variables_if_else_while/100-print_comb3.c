@@ -10,28 +10,22 @@ int main(void)
 {
 	int n, i;
 
-	n = 0;
-	i = 0;
-
-	while (i < '9')
+	for (n = '0'; n <= '9'; n++)
 	{
-		n = 0;
-		while (n < '9')
+		for (i = '0'; i <= '9'; i++)
 		{
-			if (i != n && i < n)
+			if (n < i)
 			{
-				putchar(i);
 				putchar(n);
-				if (n == '8' && i == '7')
+				putchar(i);
+				if (n != '8' || (n == '8' && i != '9'))
 				{
-					break;
+					putchar(',');
+					putchar(' ');
 				}
-				putchar(',');
-				putchar(' ');
+				
 			}
-			n++;
 		}
-		i++;
 	}
 	putchar('\n');
 	return (0);
