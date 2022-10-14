@@ -13,16 +13,16 @@ int main(void)
 	n = 0;
 	i = 0;
 
-	while (i < 9)
+	while (i < '9')
 	{
 		n = 0;
-		while (n < 9)
+		while (n < '9')
 		{
 			if (i != n && i < n)
 			{
 				putchar(i);
 				putchar(n);
-				if (n == 8 && i == 7)
+				if (n == '8' && i == '7')
 				{
 					break;
 				}
