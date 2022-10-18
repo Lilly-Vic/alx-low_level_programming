@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Description: checks for alphabetic character
+ * _isalpha - checks for alphabetic character
+ * @c: single letter input
  * Return: Always 0 (Success)
  */
 
