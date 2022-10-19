@@ -6,7 +6,8 @@
  * Return: Always 0 (Success)
  */
 
-int main(void){
+int main(void)
+{
 	unsigned long int sum3, sum5, sum;
 	int i;
 
