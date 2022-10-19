@@ -18,7 +18,7 @@ int main(void)
 		if (f1 != 20365011074)
 			printf("%ld, ", f1);
 		else
-			printf("%ld\n", f1)
+			printf("%ld\n", f1);
 		next = f1 + f2;
 		f1 = f2;
 		f2 = next;
