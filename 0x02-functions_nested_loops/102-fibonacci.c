@@ -9,7 +9,6 @@
 int main(void)
 {
 	long int n, f1, f2, next;
-	
 	f1 = 1;
 	f2 = 2;
 
