@@ -2,11 +2,13 @@
 
 /**
  * main - Entry point
- * Description: finds and prints the first 98 Fibonacci numbers, starting with 1 and 2
+ * Description: finds and prints the first 98 Fibonacci numbers,
+ * starting with 1 and 2
  * Return: Always 0 (Success)
  */
 
-int main(void){
+int main(void)
+{
 	unsigned long int num1 = 1, num2 = 2, a;
 
 	int n;
