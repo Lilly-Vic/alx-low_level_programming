@@ -11,7 +11,6 @@ int mul(int a, int b)
 {
 	int product;
 
-	//Multiplying
 	product = a * b;
 	return (product);
 }
