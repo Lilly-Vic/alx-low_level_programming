@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 /**
  * main - enerates random valid passwords for the program 101-crackme
@@ -15,7 +16,7 @@ int main(void)
 	srand((unsigned int) time(&t));
 	while (c < 2772)
 	{
-		r = rand() % 128;
+		r = rand() % 126;
 		if ((c + r) > 2772)
 			break;
 		c = c + r;
