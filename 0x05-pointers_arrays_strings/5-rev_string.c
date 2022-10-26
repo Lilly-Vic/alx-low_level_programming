@@ -10,12 +10,10 @@ void rev_string(char *s)
 {
 	int n, max, half;
 	char first, last;
-	
+
 	n = 0;
 	while (s[n] != '\0')
-	{
 		n++;
-	}
 	max = n - 1;
 	half = max / 2;
 	while (half >= 0)
