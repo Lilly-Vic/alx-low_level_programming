@@ -9,18 +9,18 @@
 
 int main(void)
 {
-	int s = 0, r;
+	int r = 0, c;
 	time_t t;
 
 	srand((unsigned int) time(&t));
-	while (r < 2772)
+	while (c < 2772)
 	{
-		s = rand() % 128;
-		if ((r + s) > 2772)
+		r = rand() % 128;
+		if ((c + r) > 2772)
 			break;
-		r = r + s;
-		printf("%c", s);
+		c = c + r;
+		printf("%c", r);
 	}
-	printf("%c\n", (2772 - r));
+	printf("%c\n", (2772 - c));
 	return (0);
 }
