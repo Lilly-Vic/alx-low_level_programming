@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
  * main - generate password
  * Return: Always 0
  */
-
 int main(void)
 {
 	int n = 0, i = 0;
