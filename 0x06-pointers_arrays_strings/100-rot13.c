@@ -13,7 +13,7 @@ char *rot13(char *str)
 	char data[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot13k[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (str[++n])
+	for (n = 0; str[n] != '\0'; n++)
 	{
 		for (i = 0; i < 52; i++)
 		{
