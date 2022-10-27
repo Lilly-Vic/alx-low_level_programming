@@ -38,7 +38,7 @@ void print_buffer(char *b, int size)
 			else
 				printf(".");
 		}
-		printf('\n');
+		printf("\n");
 		i += 10;
 	}
 }
