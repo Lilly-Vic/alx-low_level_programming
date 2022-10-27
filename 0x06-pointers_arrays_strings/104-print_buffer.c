@@ -40,7 +40,7 @@ void print_buffer(char *b, int size)
 					printf(" ");
 			}
 			printf(" ");
-			for (k = i; k < i + 10 i++)
+			for (k = i; k < i + 10; i++)
 			{
 				if (k >= size)
 					break;
