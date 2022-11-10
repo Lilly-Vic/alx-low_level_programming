@@ -5,22 +5,21 @@ void get_prod(char *dest, char *d1, int d1_len, char *d2, int d2_len);
 void result(char *src, int length);
 
 /**
- * get_len - Finds the length of a string.
- * @str: The string to be measured.
- * Return: The length of the string.
+ * get_len - Finds the length of a string
+ * @str: The string to be measured
+ * Return: The length of the string
  */
 int get_len(char *str)
 {
 	int len = 0;
-	
+
 	while (str[len])
 	{
 		if (str[len] >= '0' && str[len] <= '9')
 			len++;
 		else
-			return ('\0');
+			return ('\0')
 	}
-	
 	return (len);
 }
 
@@ -38,7 +37,7 @@ void get_prod(char *dest, char *d1, int d1_len, char *d2, int d2_len)
 	int m, n, i, temp_value, zero;
 	int carry_value = 0;
 	char *final_prod, *multiplier;
-	
+
 	if (d1_len > d2_len)
 	{
 		m = d1_len - 1;
@@ -53,7 +52,7 @@ void get_prod(char *dest, char *d1, int d1_len, char *d2, int d2_len)
 		final_prod = d2;
 		multiplier = d1;
 	}
-	
+
 	while (m >= 0)
 	{
 		i = m;
@@ -61,10 +60,10 @@ void get_prod(char *dest, char *d1, int d1_len, char *d2, int d2_len)
 		{
 			temp_value = ((final_prod[i] - '0') * (multiplier[n] - '0'));
 			temp_value += carry_value;
-			
+
 			if (n + 1 <= d2_len - 1 && dest[i + n + 1] >= '0' && dest[i + n + 1] <= '9')
 				temp_value += dest[i + n + 1] - '0';
-			
+
 			if (temp_value < 10)
 			{
 				zero = temp_value;
@@ -78,12 +77,11 @@ void get_prod(char *dest, char *d1, int d1_len, char *d2, int d2_len)
 			dest[i + n + 1] = zero + '0';
 			i--;
 		}
-		
+
 		if (carry_value)
 			dest[i + n + 1] = carry_value + '0';
-		
 		carry_value = 0;
-		
+
 		if (n > 0)
 			n--;
 		else
@@ -102,7 +100,7 @@ void get_prod(char *dest, char *d1, int d1_len, char *d2, int d2_len)
 void result(char *src, int length)
 {
 	int i;
-	
+
 	for (i = 0; i < length; i++)
 	{
 		if (src[i] >= '0' && src[i] <= '9')
@@ -126,27 +124,27 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	
+
 	num1 = get_len(argv[1]);
 	if (!num1)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	
+
 	num2 = get_len(argv[2]);
 	if (!num2)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	
+
 	mul = malloc(num1 + num2);
 	if (!mul)
 		return (1);
-	
+
 	get_prod(mul, argv[1], num1, argv[2], num2);
-	
+
 	result(mul, num1 + num2);
 	printf("\n");
 	free(mul);
