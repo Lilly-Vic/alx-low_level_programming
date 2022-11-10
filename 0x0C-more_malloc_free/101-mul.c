@@ -18,7 +18,7 @@ int get_len(char *str)
 		if (str[len] >= '0' && str[len] <= '9')
 			len++;
 		else
-			return ('\0')
+			return ('\0');
 	}
 	return (len);
 }
