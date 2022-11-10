@@ -1,7 +1,7 @@
 #include "main.h"
 
 int get_len(char *str);
-void get_prod(char *dest, char *digit1, int digit1_len, char *digit2, int digit2_len);
+void get_prod(char *dest, char *d1, int d1_len, char *d2, int d2_len);
 void result(char *src, int length);
 
 /**
@@ -28,30 +28,30 @@ int get_len(char *str)
  * get_prod - multiplies two numbers stored as string
  * and stores result in @dest
  * @dest: pointer to where @num1 * @num2 should be stored
- * @digit1: positive number stored as string in an array
- * @digit2: positive number stored as string in an array
- * @digit1_len: length of @digit1
- * @digit2_len: length of @digit2
+ * @d1: positive number stored as string in an array
+ * @d2: positive number stored as string in an array
+ * @d1_len: length of @d1
+ * @d2_len: length of @d2
  */
-void get_prod(char *dest, char *digit1, int digit1_len, char *digit2, int digit2_len)
+void get_prod(char *dest, char *d1, int d1_len, char *d2, int d2_len)
 {
 	int m, n, i, temp_value, zero;
 	int carry_value = 0;
 	char *final_prod, *multiplier;
 	
-	if (digit1_len > digit2_len)
+	if (d1_len > d2_len)
 	{
-		m = digit1_len - 1;
-		n = digit2_len - 1;
-		final_prod = digit1;
-		multiplier = digit2;
+		m = d1_len - 1;
+		n = d2_len - 1;
+		final_prod = d1;
+		multiplier = d2;
 	}
 	else
 	{
-		m = digit2_len - 1;
-		n = digit1_len - 1;
-		final_prod = digit2;
-		multiplier = digit1;
+		m = d2_len - 1;
+		n = d1_len - 1;
+		final_prod = d2;
+		multiplier = d1;
 	}
 	
 	while (m >= 0)
@@ -62,7 +62,7 @@ void get_prod(char *dest, char *digit1, int digit1_len, char *digit2, int digit2
 			temp_value = ((final_prod[i] - '0') * (multiplier[n] - '0'));
 			temp_value += carry_value;
 			
-			if (n + 1 <= digit2_len - 1 && dest[i + n + 1] >= '0' && dest[i + n + 1] <= '9')
+			if (n + 1 <= d2_len - 1 && dest[i + n + 1] >= '0' && dest[i + n + 1] <= '9')
 				temp_value += dest[i + n + 1] - '0';
 			
 			if (temp_value < 10)
