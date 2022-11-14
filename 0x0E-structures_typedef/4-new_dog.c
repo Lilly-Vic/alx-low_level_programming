@@ -1,8 +1,5 @@
 #include "dog.h"
 
-int _strlen(char *str);
-char *_strcpy(char *dest, char *src);
-
 /**
  * _strlen - find the length of string
  * @str: string
