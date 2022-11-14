@@ -1,5 +1,6 @@
 #ifndef DOG_H
 #define DOG_H
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,9 +18,6 @@ struct dog
 	char *owner;
 };
 
-/**
- * dog_t - Typedef for struct dog
- */
 
 typedef struct dog dog_t;
 
