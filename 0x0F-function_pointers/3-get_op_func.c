@@ -1,5 +1,5 @@
 #include "3-calc.h"
-#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -23,9 +23,9 @@ int (*get_op_func(char *s))(int, int)
 
 	while (i < 5)
 	{
-		if (*(ops[i].op) == *s)
+		if (strcmp(s, ops[i].op) == 0)
 			return (ops[i].f);
 		i++;
 	}
-	return (ops[i].f);
+	return (0);
 }
