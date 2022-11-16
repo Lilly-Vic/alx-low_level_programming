@@ -6,7 +6,7 @@
  * main - Entry point
  * @argc: number of arguments
  * @argv: array of pointers to the arguments
- * Return: 0 
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
@@ -26,7 +26,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	
 	printf("%d\n", func_ptr(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
