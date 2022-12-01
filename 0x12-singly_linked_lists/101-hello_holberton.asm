@@ -1,10 +1,10 @@
-	global main
-
 	section .text
+	global main
+	
 main: 	mov rax, 1
 	mov rdi, 1
 	mov rsi, message
-	mov rdx, 18
+	mov rdx, len
 	syscall
 	mov rax, 60
 	xor rdi, rdi
@@ -12,3 +12,4 @@ main: 	mov rax, 1
 	
 	section .data
 message: db "Hello, Holberton", 10
+	len equ $-message
